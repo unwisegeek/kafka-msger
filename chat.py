@@ -5,10 +5,10 @@ import os, socket, sys, time
 hostname = socket.gethostname()
 kafkahost = sys.argv[1]
 
-pconf = {'bootstrap.servers': "localhost:9092", 
+pconf = {'bootstrap.servers': "{}:9092".format(kafkahost), 
          'client.id': hostname
          }
-cconf = {'bootstrap.servers': "localhost:9092",
+cconf = {'bootstrap.servers': "{}:9092".format(kafkahost),
          'group.id': "reader",
          'auto.offset.reset': 'smallest'
          }
