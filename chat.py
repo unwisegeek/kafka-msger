@@ -9,7 +9,7 @@ pconf = {'bootstrap.servers': "{}:9092".format(kafkahost),
          'client.id': hostname
          }
 cconf = {'bootstrap.servers': "{}:9092".format(kafkahost),
-         'group.id': "reader",
+         'group.id': hostname,
          'auto.offset.reset': 'smallest'
          }
 
