@@ -3,6 +3,7 @@ from confluent_kafka import Consumer
 import os, socket, sys, time
 
 hostname = socket.gethostname()
+kafkahost = sys.argv[1]
 
 pconf = {'bootstrap.servers': "localhost:9092", 
          'client.id': hostname
